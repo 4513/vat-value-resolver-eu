@@ -1,7 +1,7 @@
 {
     "name": "mibo/vat-value-resolver-eu",
     "type": "library",
-    "description": "PHP Library for VAT abstraction",
+    "description": "PHP Lib for VAT rate value resolving for EU countries",
     "keywords": [
         "PHP",
         "EU VAT",
