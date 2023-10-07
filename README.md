@@ -1,4 +1,6 @@
-# VAT Value Resolver for the EU
+# VAT Value Resolver for the EU  
+[![codecov](https://codecov.io/gh/4513/vat-value-resolver-eu/graph/badge.svg?token=X1l8bJImRU)](https://codecov.io/gh/4513/vat-value-resolver-eu)  
+
 *mibo/vat-value-resolver-eu*  
 
  The library implements Value Resolver for VAT rates for the EU member countries. Note, that the library
