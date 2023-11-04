@@ -29,6 +29,7 @@ final class ResolverTest extends TestCase
      *
      * @covers ::__construct
      * @covers ::getValueOfVAT
+     * @covers ::setResourceFile
      *
      * @param class-string<\Throwable>|int|float $expected
      * @param \MiBo\VAT\VAT $vat
@@ -49,7 +50,11 @@ final class ResolverTest extends TestCase
             $this->expectException($expected);
         }
 
-        $result = $this->getResolver()->getValueOfVAT($vat);
+        $resolver = $this->getResolver();
+
+        $resolver->setResourceFile(__DIR__ . '/../resources/vat-rates.php');
+
+        $result = $resolver->getValueOfVAT($vat);
 
         $this->assertEquals($expected, $result);
     }

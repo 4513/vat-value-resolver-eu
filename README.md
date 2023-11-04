@@ -15,6 +15,19 @@ of reporting upcoming changes of VAT rates, so that the library can be updated i
 
 ---
 ### News
+**Slovakia 2024** - Not approved yet  
+Since `vX.X.X`  
+New VAT values for Slovakia for 2024 were added.  
+Then change includes:  
+* Standard VAT rate from 20 to 22 percent.
+
+**Czechia 2024** - Not approved yet  
+Since `vX.X.X`  
+New VAT values for Czechia for 2024 were added.  
+The change includes:  
+* Reduced VAT rate from 15 to 12 percent;
+* Second reduced VAT rate removed.
+
 **Estonia 2024** - Not approved yet  
 Since `vX.X.X`  
 *[Increase of 2 percent to VAT rate](https://www.riigikogu.ee/tegevus/eelnoud/eelnou/d0b2635d-5314-4d28-842b-b961c167350a/kaibemaksuseaduse-ja-maksukorralduse-seaduse-muutmise-seadus)*  

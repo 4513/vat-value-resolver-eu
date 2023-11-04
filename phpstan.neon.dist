@@ -2,5 +2,3 @@ parameters:
     level: 9
     paths:
         - src
-    ignoreErrors:
-        - "#Cannot call method getTimestamp\\(\\) on Carbon\\\\Carbon\\|false\\.#"

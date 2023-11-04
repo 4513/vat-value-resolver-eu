@@ -35,6 +35,7 @@
         <exclude name="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment.OneLinePropertyComment"/>
         <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses.UselessParentheses"/>
         <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation"/>
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants.NonFullyQualified"/>
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
@@ -59,19 +60,15 @@
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Arrays.AlphabeticallySortedByKeys.IncorrectKeyOrder">
-        <exclude-pattern>./src/*</exclude-pattern>
         <exclude-pattern>./tests/*</exclude-pattern>
     </rule>
     <rule ref="SlevomatCodingStandard.Files.FileLength.FileTooLong">
-        <exclude-pattern>./src/*</exclude-pattern>
         <exclude-pattern>./tests/*</exclude-pattern>
     </rule>
     <rule ref="SlevomatCodingStandard.Classes.ClassLength.ClassTooLong">
-        <exclude-pattern>./src/*</exclude-pattern>
         <exclude-pattern>./tests/*</exclude-pattern>
     </rule>
     <rule ref="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator">
-        <exclude-pattern>./src/*</exclude-pattern>
         <exclude-pattern>./tests/*</exclude-pattern>
     </rule>
     <rule ref="SlevomatCodingStandard.Attributes.AttributesOrder">
