@@ -180,10 +180,10 @@ return [
         ],
     ],
     'EST' => [
-        //                Carbon::create(2024)->getTimestamp() => [
-        //                    VATRate::STANDARD->name => 22,
-        //                    VATRate::REDUCED->name  => 9,
-        //                ],
+        Carbon::create(2024)->getTimestamp() => [
+            VATRate::STANDARD->name => 22,
+            VATRate::REDUCED->name  => 9,
+        ],
         Carbon::create(2009, Carbon::JULY)->getTimestamp() => [
             VATRate::STANDARD->name => 20,
             VATRate::REDUCED->name  => 9,

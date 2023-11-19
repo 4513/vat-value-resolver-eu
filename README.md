@@ -28,8 +28,8 @@ The change includes:
 * Reduced VAT rate from 15 to 12 percent;
 * Second reduced VAT rate removed.
 
-**Estonia 2024** - Not approved yet  
-Since `vX.X.X`  
+**Estonia 2024**  
+Since `v1.2.0`  
 *[Increase of 2 percent to VAT rate](https://www.riigikogu.ee/tegevus/eelnoud/eelnou/d0b2635d-5314-4d28-842b-b961c167350a/kaibemaksuseaduse-ja-maksukorralduse-seaduse-muutmise-seadus)*  
 New VAT values for Estonia for 2024 were added.
 The change includes:  
