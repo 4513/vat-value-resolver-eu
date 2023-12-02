@@ -77,10 +77,10 @@ return [
         ],
     ],
     'CZE' => [
-        //                Carbon::create(2024)->getTimestamp() => [
-        //                    VATRate::STANDARD->name => 21,
-        //                    VATRate::REDUCED->name  => 12,
-        //                ],
+        Carbon::create(2024)->getTimestamp() => [
+            VATRate::STANDARD->name => 21,
+            VATRate::REDUCED->name  => 12,
+        ],
         Carbon::create(2015)->getTimestamp() => [
             VATRate::STANDARD->name       => 21,
             VATRate::REDUCED->name        => 15,

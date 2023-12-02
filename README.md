@@ -21,8 +21,8 @@ New VAT values for Slovakia for 2024 were added.
 Then change includes:  
 * Standard VAT rate from 20 to 22 percent.
 
-**Czechia 2024** - Not approved yet  
-Since `vX.X.X`  
+**Czechia 2024**  
+Since `v1.3.0`  
 New VAT values for Czechia for 2024 were added.  
 The change includes:  
 * Reduced VAT rate from 15 to 12 percent;
