@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.1] - 2023-12-30
+
+### Fixed
+- Timezones for each country are now correctly set
+
 ## [1.3.0] - 2023-12-02
 
 ### Added
