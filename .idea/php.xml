@@ -62,8 +62,8 @@
   </component>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter id="0414f06f-5a53-4f17-a04c-517383195d0d" name="docker.feo.cz/feo/php-arm:8.1" home="docker://DATA" debugger_id="php.debugger.XDebug">
-        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" INITIALIZED="false" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker81" DOCKER_IMAGE_NAME="docker.feo.cz/feo/php-arm:8.1" DOCKER_REMOTE_PROJECT_PATH="/opt/project" />
+      <interpreter id="0414f06f-5a53-4f17-a04c-517383195d0d" name="docker.feo.cz/feo/php-arm:8.1" home="docker://DATA" auto="false" debugger_id="php.debugger.XDebug">
+        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker81" DOCKER_IMAGE_NAME="docker.feo.cz/feo/php-arm:8.1" DOCKER_REMOTE_PROJECT_PATH="/opt/project" />
       </interpreter>
     </interpreters>
   </component>
@@ -133,7 +133,7 @@
       </interpreter>
     </phpInfoCache>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
   <component name="PhpStan">
     <PhpStan_settings>
       <PhpStanConfiguration tool_path="$PROJECT_DIR$/vendor/bin/phpstan" />
