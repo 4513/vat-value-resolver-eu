@@ -36,18 +36,18 @@
     },
     "require": {
         "php": "^8.2",
-        "mibo/vat": "^2.0"
+        "mibo/vat": "^2.0",
+        "nesbot/carbon": "^2.72|^3.8"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.5",
-        "phpunit/php-invoker": "^4.0",
+        "phpunit/phpunit": "^11.4",
+        "phpunit/php-invoker": "^5.0",
         "phpstan/phpstan": "^1.5",
         "phpstan/phpstan-strict-rules": "^1.5",
         "jetbrains/phpstorm-attributes": "^1.0",
         "slevomat/coding-standard": "^8.13",
         "phpstan/extension-installer": "^1.3",
-        "php-parallel-lint/php-parallel-lint": "^1.3",
-        "nesbot/carbon": "^2.71"
+        "php-parallel-lint/php-parallel-lint": "^1.3"
     },
     "provide": {
         "mibo/vat-implementation": "^2.0"
