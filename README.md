@@ -15,11 +15,14 @@ of reporting upcoming changes of VAT rates, so that the library can be updated i
 
 ---
 ### News
-**Slovakia 2024** - Not approved yet  
-Since `vX.X.X`  
+**Slovakia 2025**  
+Since `v1.4.0`  
+*[Increase of 3 percent to VAT rate](https://www.epi.sk/zz/2024-278#cl-VII)*  
 New VAT values for Slovakia for 2024 were added.  
 Then change includes:  
-* Standard VAT rate from 20 to 22 percent.
+* Standard VAT rate from 20 to 23 percent;
+* Reduced VAT rate from 10 to 19 percent;
+* Introduced Second reduced VAT rate at 5 percent.
 
 **Czechia 2024**  
 Since `v1.3.0`  

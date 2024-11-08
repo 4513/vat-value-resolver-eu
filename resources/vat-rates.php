@@ -964,10 +964,11 @@ return [
         ],
     ],
     'SVK' => [
-        //                Carbon::create(2024,1, 1, 0, 0, 0, 'Europe/Bratislava')->getTimestamp() => [
-        //                    VATRate::STANDARD->name => 22,
-        //                    VATRate::REDUCED->name  => 10,
-        //                ],
+        Carbon::create(2025,1, 1, 0, 0, 0, 'Europe/Bratislava')->getTimestamp() => [
+            VATRate::STANDARD->name       => 23,
+            VATRate::REDUCED->name        => 19,
+            VATRate::SECOND_REDUCED->name => 5,
+        ],
         Carbon::create(2011,1, 1, 0, 0, 0, 'Europe/Bratislava')->getTimestamp() => [
             VATRate::STANDARD->name => 20,
             VATRate::REDUCED->name  => 10,
