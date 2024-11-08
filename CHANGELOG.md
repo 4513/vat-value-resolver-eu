@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Resolver - EST 2025 VAT rates
 - Resolver - SVK 2025 VAT rates
 
 ## [1.3.1] - 2023-12-30

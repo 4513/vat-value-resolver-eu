@@ -15,6 +15,21 @@ of reporting upcoming changes of VAT rates, so that the library can be updated i
 
 ---
 ### News
+
+**Estonia 2025** - change of standard VAT rate not approved yet.  
+Since `vX.X.X`  
+New VAT values for Estonia for 2025 were added.  
+Then change includes:
+* Standard VAT rate from 22 to 24 percent.
+
+**Estonia 2025**  
+Since `v1.4.0`  
+*[Changes in the Estonian Value Added Tax Act](https://www.emta.ee/en/business-client/taxes-and-payment/value-added-tax#from-01012025)*  
+New VAT values for Estonia for 2025 were added.  
+Then change includes:
+* Reduced VAT rate from 9 to 13 percent;
+* Second reduced VAT rate from 5 to 9 percent.
+
 **Slovakia 2025**  
 Since `v1.4.0`  
 *[Increase of 3 percent to VAT rate](https://www.epi.sk/zz/2024-278#cl-VII)*  
