@@ -6,6 +6,9 @@ namespace MiBo\VAT\ValueResolvers\Tests;
 
 use MiBo\VAT\ValueResolvers\EUValueResolver;
 use MiBo\VAT\VAT;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DataProviderExternal;
+use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\TestCase;
 use function is_string;
 
@@ -22,32 +25,21 @@ use function is_string;
  *
  * @coversDefaultClass \MiBo\VAT\ValueResolvers\EUValueResolver
  */
+#[CoversClass(EUValueResolver::class)]
+#[Small]
 final class ResolverTest extends TestCase
 {
-    /**
-     * @small
-     *
-     * @covers ::__construct
-     * @covers ::getValueOfVAT
-     * @covers ::setResourceFile
-     *
-     * @param class-string<\Throwable>|int|float $expected
-     * @param \MiBo\VAT\VAT $vat
-     *
-     * @return void
-     *
-     * @dataProvider \MiBo\VAT\ValueResolvers\Tests\DataProvider::noneRate()
-     * @dataProvider \MiBo\VAT\ValueResolvers\Tests\DataProvider::anyRate()
-     * @dataProvider \MiBo\VAT\ValueResolvers\Tests\DataProvider::combinedRate()
-     * @dataProvider \MiBo\VAT\ValueResolvers\Tests\DataProvider::invalidVatRate()
-     * @dataProvider \MiBo\VAT\ValueResolvers\Tests\DataProvider::missingDates()
-     * @dataProvider \MiBo\VAT\ValueResolvers\Tests\DataProvider::unknownCountry()
-     * @dataProvider \MiBo\VAT\ValueResolvers\Tests\DataProvider::dataForSVK()
-     */
+    #[DataProviderExternal(DataProvider::class, 'noneRate')]
+    #[DataProviderExternal(DataProvider::class, 'anyRate')]
+    #[DataProviderExternal(DataProvider::class, 'combinedRate')]
+    #[DataProviderExternal(DataProvider::class, 'invalidVatRate')]
+    #[DataProviderExternal(DataProvider::class, 'missingDates')]
+    #[DataProviderExternal(DataProvider::class, 'unknownCountry')]
+    #[DataProviderExternal(DataProvider::class, 'dataForSVK')]
     public function testResolving(string|int|float $expected, VAT $vat): void
     {
         if (is_string($expected)) {
-            $this->expectException($expected);
+            self::expectException($expected);
         }
 
         $resolver = $this->getResolver();
@@ -56,7 +48,7 @@ final class ResolverTest extends TestCase
 
         $result = $resolver->getValueOfVAT($vat);
 
-        $this->assertEquals($expected, $result);
+        self::assertEquals($expected, $result);
     }
 
     private function getResolver(): EUValueResolver
