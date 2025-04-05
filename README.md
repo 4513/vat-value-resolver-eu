@@ -24,10 +24,10 @@ New VAT values for Estonia for 2025 were added.
 Then change includes:
 * Standard VAT rate from 22 to 24 percent.
 
-**Finland 2024**
-Since `v1.5.0`
+**Finland 2024**  
+Since `v1.5.0`  
 New VAT values for Finland for 2024 were added.  
-The change includes:
+The change includes:  
 * Standard VAT rate from 24 to 25.5 percent;
 
 **Estonia 2025**  
