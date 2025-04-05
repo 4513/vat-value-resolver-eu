@@ -16,11 +16,19 @@ of reporting upcoming changes of VAT rates, so that the library can be updated i
 ---
 ### News
 
-**Estonia 2025** - change of standard VAT rate not approved yet.  
-Since `vX.X.X`  
+**Estonia 2025**  
+Since `v1.5.0`  
+*[Security Tax Act 512 SE](https://www.riigikogu.ee/tegevus/eelnoud/eelnou/34d9788f-38ac-4530-b10b-ad2447b3ecac/julgeolekumaksu-seaduse-eelnou-512-se/)*  
+*[Changes in the Estonian Value Added Tax Act](https://www.emta.ee/en/business-client/taxes-and-payment/value-added-tax#from-01012025)*  
 New VAT values for Estonia for 2025 were added.  
 Then change includes:
 * Standard VAT rate from 22 to 24 percent.
+
+**Finland 2024**
+Since `v1.5.0`
+New VAT values for Finland for 2024 were added.  
+The change includes:
+* Standard VAT rate from 24 to 25.5 percent;
 
 **Estonia 2025**  
 Since `v1.4.0`  
