@@ -180,7 +180,7 @@ return [
         ],
     ],
     'EST' => [
-        Carbon::create(2025, Carbon::SEPTEMBER, 1, 0, 0, 0, 'Europe/Tallinn')->getTimestamp() => [
+        Carbon::create(2025, Carbon::JULY, 1, 0, 0, 0, 'Europe/Tallinn')->getTimestamp() => [
             VATRate::STANDARD->name       => 24,
             VATRate::REDUCED->name        => 13,
             VATRate::SECOND_REDUCED->name => 9,
