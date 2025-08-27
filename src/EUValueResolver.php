@@ -28,7 +28,7 @@ final class EUValueResolver implements ValueResolver
 
     public function __construct()
     {
-        $this->vatRates = require __DIR__ . '/../resources/vat-rates.php';
+        $this->vatRates = include __DIR__ . '/../resources/vat-rates.php';
     }
 
     /**
@@ -46,12 +46,14 @@ final class EUValueResolver implements ValueResolver
             return 0;
         }
 
-        if (!key_exists($vat->getCountryCode(), $this->vatRates)) {
+        $ccCode = $this->countryAlpha2ToAlpha3($vat->getCountryCode());
+
+        if (!key_exists($ccCode, $this->vatRates)) {
             throw new OutOfRangeException('Unknown country code ' . $vat->getCountryCode());
         }
 
         $date  = $vat->getDate()->getTimestamp();
-        $rates = $this->vatRates[$vat->getCountryCode()];
+        $rates = $this->vatRates[$ccCode];
 
         foreach ($rates as $validSince => $VATs) {
             if ($date < $validSince) {
@@ -95,6 +97,45 @@ final class EUValueResolver implements ValueResolver
      */
     public function setResourceFile(string $resource): void
     {
-        $this->vatRates = require $resource;
+        $this->vatRates = include $resource;
+    }
+
+    /**
+     * @param string $alpha2
+     *
+     * @return string
+     */
+    private function countryAlpha2ToAlpha3(string $alpha2): string
+    {
+        return match ($alpha2) {
+            'AT' => 'AUT',
+            'BE' => 'BEL',
+            'BG' => 'BGR',
+            'CY' => 'CYP',
+            'CZ' => 'CZE',
+            'DE' => 'DEU',
+            'DK' => 'DNK',
+            'EE' => 'EST',
+            'EL' => 'GRC',
+            'ES' => 'ESP',
+            'FI' => 'FIN',
+            'FR' => 'FRA',
+            'HR' => 'HRV',
+            'HU' => 'HUN',
+            'IE' => 'IRL',
+            'IT' => 'ITA',
+            'LT' => 'LTU',
+            'LU' => 'LUX',
+            'LV' => 'LVA',
+            'MT' => 'MLT',
+            'NL' => 'NLD',
+            'PL' => 'POL',
+            'PT' => 'PRT',
+            'RO' => 'ROU',
+            'SE' => 'SWE',
+            'SI' => 'SVN',
+            'SK' => 'SVK',
+            default => $alpha2,
+        };
     }
 }

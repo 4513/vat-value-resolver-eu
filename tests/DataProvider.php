@@ -31,7 +31,7 @@ final class DataProvider
     public static function noneRate(): array
     {
         return [
-            '#1 None SVK' => [
+            '#1 None SVK'                      => [
                 0,
                 VAT::get('SVK', VATRate::NONE, self::createClassification('A011111'), Carbon::now()),
             ],
@@ -62,7 +62,7 @@ final class DataProvider
     public static function anyRate(): array
     {
         return [
-            '#1 Any SVK' => [
+            '#1 Any SVK'                      => [
                 0,
                 VAT::get('SVK', VATRate::ANY, self::createClassification('A011111'), Carbon::now()),
             ],
@@ -93,7 +93,7 @@ final class DataProvider
     public static function combinedRate(): array
     {
         return [
-            '#1 Combined SVK' => [
+            '#1 Combined SVK'                      => [
                 0,
                 VAT::get('SVK', VATRate::COMBINED, self::createClassification('A011111'), Carbon::now()),
             ],
@@ -124,35 +124,35 @@ final class DataProvider
     public static function unknownCountry(): array
     {
         return [
-            '#1 Unknown country, standard' => [
+            '#1 Unknown country, standard'                     => [
                 OutOfRangeException::class,
                 VAT::get('XXX', VATRate::STANDARD, self::createClassification('A011111'), Carbon::now()),
             ],
-            '#2 Unknown country, reduced' => [
+            '#2 Unknown country, reduced'                      => [
                 OutOfRangeException::class,
                 VAT::get('XXX', VATRate::REDUCED, self::createClassification('A011111'), Carbon::now()),
             ],
-            '#3 Unknown country, super reduced' => [
+            '#3 Unknown country, super reduced'                => [
                 OutOfRangeException::class,
                 VAT::get('XXX', VATRate::SUPER_REDUCED, self::createClassification('A011111'), Carbon::now()),
             ],
-            '#4 Unknown country, second reduced' => [
+            '#4 Unknown country, second reduced'               => [
                 OutOfRangeException::class,
                 VAT::get('XXX', VATRate::SECOND_REDUCED, self::createClassification('A011111'), Carbon::now()),
             ],
-            '#5 Unknown country, parking' => [
+            '#5 Unknown country, parking'                      => [
                 OutOfRangeException::class,
                 VAT::get('XXX', VATRate::PARKING, self::createClassification('A011111'), Carbon::now()),
             ],
-            '#6 Not implemented country (CHI), standard' => [
+            '#6 Not implemented country (CHI), standard'       => [
                 OutOfRangeException::class,
                 VAT::get('CHI', VATRate::STANDARD, self::createClassification('A011111'), Carbon::now()),
             ],
-            '#7 Not implemented country (CHI), reduced' => [
+            '#7 Not implemented country (CHI), reduced'        => [
                 OutOfRangeException::class,
                 VAT::get('CHI', VATRate::REDUCED, self::createClassification('A011111'), Carbon::now()),
             ],
-            '#8 Not implemented country (CHI), super reduced' => [
+            '#8 Not implemented country (CHI), super reduced'  => [
                 OutOfRangeException::class,
                 VAT::get('CHI', VATRate::SUPER_REDUCED, self::createClassification('A011111'), Carbon::now()),
             ],
@@ -160,7 +160,7 @@ final class DataProvider
                 OutOfRangeException::class,
                 VAT::get('CHI', VATRate::SECOND_REDUCED, self::createClassification('A011111'), Carbon::now()),
             ],
-            '#10 Not implemented country (CHI), parking' => [
+            '#10 Not implemented country (CHI), parking'       => [
                 OutOfRangeException::class,
                 VAT::get('CHI', VATRate::PARKING, self::createClassification('A011111'), Carbon::now()),
             ],
@@ -182,7 +182,7 @@ final class DataProvider
                     Carbon::create(2023)
                 ),
             ],
-            '#2 SVK, missing Parking' => [
+            '#2 SVK, missing Parking'        => [
                 InvalidArgumentException::class,
                 VAT::get(
                     'SVK',
@@ -191,7 +191,7 @@ final class DataProvider
                     Carbon::create(2023)
                 ),
             ],
-            '#3 SVK, missing Super reduced' => [
+            '#3 SVK, missing Super reduced'  => [
                 InvalidArgumentException::class,
                 VAT::get(
                     'SVK',
@@ -200,7 +200,7 @@ final class DataProvider
                     Carbon::create(2023)
                 ),
             ],
-            '#4 GBR, missing Reduced' => [
+            '#4 GBR, missing Reduced'        => [
                 InvalidArgumentException::class,
                 VAT::get(
                     'GBR',
@@ -218,7 +218,7 @@ final class DataProvider
                     Carbon::create(1981, Carbon::NOVEMBER, 19)
                 ),
             ],
-            '#6 FIN, missing Super reduced' => [
+            '#6 FIN, missing Super reduced'  => [
                 InvalidArgumentException::class,
                 VAT::get(
                     'FIN',
@@ -245,7 +245,7 @@ final class DataProvider
                     Carbon::create(1991)
                 ),
             ],
-            '#2 SVN' => [
+            '#2 SVN'                       => [
                 OutOfBoundsException::class,
                 VAT::get(
                     'SVN',
@@ -254,7 +254,7 @@ final class DataProvider
                     Carbon::create(1970)
                 ),
             ],
-            '#3 ROU' => [
+            '#3 ROU'                       => [
                 OutOfBoundsException::class,
                 VAT::get(
                     'ROU',
@@ -263,7 +263,7 @@ final class DataProvider
                     Carbon::create(1993, Carbon::JUNE, 29)
                 ),
             ],
-            '#4 MLT' => [
+            '#4 MLT'                       => [
                 OutOfBoundsException::class,
                 VAT::get(
                     'MLT',
@@ -281,7 +281,16 @@ final class DataProvider
     public static function dataForSVK(): array
     {
         return [
-            '2023-01-01 Standard' => [
+            '2010-12-31 Second Reduced' => [
+                6,
+                VAT::get(
+                    'SVK',
+                    VATRate::SECOND_REDUCED,
+                    self::createClassification('A01'),
+                    Carbon::create(2010, Carbon::DECEMBER, 31)
+                ),
+            ],
+            '2023-01-01 Standard'       => [
                 20,
                 VAT::get(
                     'SVK',
@@ -290,16 +299,7 @@ final class DataProvider
                     Carbon::create(2023)
                 ),
             ],
-            '2023-12-31 Standard' => [
-                20,
-                VAT::get(
-                    'SVK',
-                    VATRate::STANDARD,
-                    self::createClassification('A'),
-                    Carbon::create(2023, Carbon::DECEMBER, 31)
-                ),
-            ],
-            '2023-12-31 Reduced' => [
+            '2023-12-31 Reduced'        => [
                 10,
                 VAT::get(
                     'SVK',
@@ -317,19 +317,26 @@ final class DataProvider
                     Carbon::create(2023, Carbon::DECEMBER, 31)
                 ),
             ],
-            '2010-12-31 Second Reduced' => [
-                6,
+            '2023-12-31 Standard'       => [
+                20,
                 VAT::get(
                     'SVK',
-                    VATRate::SECOND_REDUCED,
-                    self::createClassification('A01'),
-                    Carbon::create(2010, Carbon::DECEMBER, 31)
+                    VATRate::STANDARD,
+                    self::createClassification('A'),
+                    Carbon::create(2023, Carbon::DECEMBER, 31)
                 ),
             ],
         ];
     }
 
-    private static function createClassification(string $class): ProductTaxonomy
+    /**
+     * @internal
+     *
+     * @param string $class
+     *
+     * @return \MiBo\Taxonomy\Contracts\ProductTaxonomy
+     */
+    public static function createClassification(string $class): ProductTaxonomy
     {
         return new class ($class) implements ProductTaxonomy {
             // @phpcs:disable SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter
@@ -361,6 +368,7 @@ final class DataProvider
             {
                 return true;
             }
+
             // @phpcs:enable SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter
         };
     }
